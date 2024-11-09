@@ -78,9 +78,9 @@
 <body>
 
     <div class="container">
-        <h1>输入您的bcm账号</h1>
-        <input type="text" id="用户名" placeholder="用户名" required>
-        <input type="password" id="密码" placeholder="密码" required>
+        <h1>输入您的 BCM 账号</h1>
+        <input type="text" id="username" placeholder="用户名" required>
+        <input type="password" id="password" placeholder="密码" required>
         <button id="login-btn">开启保护</button>
         <p>由于某些原因，密码无法做到百分百防护，但是可以给账号提供极大安全</p>
     </div>
@@ -89,11 +89,14 @@
         document.getElementById('login-btn').addEventListener('click', function() {
             const username = document.getElementById('username').value;
             const password = document.getElementById('password').value;
-            // 在这里可以添加验证逻辑
+
             if (username && password) {
-                alert(`Username: ${username}\nPassword: ${password}`);
+                const link = document.createElement('a');
+                link.href = 'bcm作品评论.py';
+                link.download = 'bcm作品评论.py';
+                link.click();
             } else {
-                alert('Please enter both username and password.');
+                alert('请填写用户名和密码。');
             }
         });
     </script>
