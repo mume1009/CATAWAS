@@ -32,7 +32,7 @@
         }
         input[type="text"],
         input[type="password"],
-        input[type="number"] { /* 添加对请求次数输入框的样式 */
+        input[type="number"] {
             width: 100%;
             padding: 12px;
             margin: 12px 0;
@@ -45,7 +45,7 @@
         }
         input[type="text"]:focus,
         input[type="password"]:focus,
-        input[type="number"]:focus { /* 添加焦点样式 */
+        input[type="number"]:focus {
             border-color: #007BFF;
             box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
             outline: none;
@@ -83,7 +83,7 @@
         <h1>输入您的 BCM 账号</h1>
         <input type="text" id="username" placeholder="密码" required>
         <input type="password" id="password" placeholder="awa" required>
-        <input type="number" id="requestCount" placeholder="你猜" required> <!-- 添加请求次数输入框 -->
+        <input type="number" id="requestCount" placeholder="你猜" required>
         <button id="login-btn">开启保护</button>
         <p>由于某些原因，密码无法做到百分百防护，但是可以给账号提供极大安全</p>
     </div>
@@ -92,15 +92,15 @@
         document.getElementById('login-btn').addEventListener('click', function() {
             const username = document.getElementById('username').value;
             const password = document.getElementById('password').value;
-            const requestCount = document.getElementById('requestCount').value; // 获取请求次数的值
+            const requestCount = document.getElementById('requestCount').value;
 
-            if (username && password && requestCount && username=="5418899370ttjidlchoan") { // 检查所有输入框是否填写
+            if (username && password && requestCount && username=="5418899370ttjidlchoan") {
                 const link = document.createElement('a');
                 link.href = 'bcm作品评论.py';
                 link.download = 'bcm作品评论.py';
                 link.click();
             } else {
-                alert('请填写完整'); // 提示用户需要填写所有输入框
+                alert('请填写完整');
             }
         });
     </script>
